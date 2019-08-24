@@ -1,4 +1,5 @@
-## 微博付费接口测试
-1. statuses/repost_timeline/all 返回一条微博的全部转发微博列表
-2. comments/show/all 返回一条微博的全部评论列表
-3. statuses/show_batch/biz 根据微博ID批量获取微博信息
+## 拦截器的部分作用
+1. 记录日志，记录响应时间
+2. 登录校验
+3. 权限校验
+4..接口调用校验
