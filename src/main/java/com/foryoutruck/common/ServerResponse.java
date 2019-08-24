@@ -1,5 +1,8 @@
 package com.foryoutruck.common;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,19 +10,22 @@ import java.util.List;
  * @Author: lilimin
  * @Date: 2019/8/24 10:21
  */
+@Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ServerResponse {
 
-    private Status status;
+    private int code;
+    private String desc;
     private List<Object> data;
 
     public enum GlobalStatus {
 
-        SUCCESS(0, "操作成功"),
-        FAILED(1, "操作失败"),
-        ERROR(2, "服务器出现错误");
+        SUCCESS(0, "成功"),
+        FAILED(1, "失败"),
+        ERROR(2, "错误");
 
-        public int code;
-        public String desc;
+        private final int code;
+        private final String desc;
 
         private GlobalStatus(int code, String desc) {
             this.code = code;
@@ -27,27 +33,14 @@ public class ServerResponse {
         }
     }
 
-    public class Status {
-        private GlobalStatus status;
-        private String desc;
-
-        public Status(GlobalStatus status) {
-            this.status = status;
-            this.desc = status.desc;
-        }
-
-        public Status(GlobalStatus status, String desc) {
-            this.status = status;
-            this.desc = desc;
-        }
-    }
-
-    public ServerResponse(GlobalStatus status, String msg) {
-        this.status = new Status(status, msg);
+    public ServerResponse(GlobalStatus status, String desc) {
+        this.code = status.code;
+        this.desc = desc;
     }
 
     public ServerResponse(GlobalStatus status) {
-        this.status = new Status(status);
+        this.code = status.code;
+        this.desc = status.desc;
     }
 
     public void addObject(Object da) {
@@ -59,5 +52,4 @@ public class ServerResponse {
     public <T>void setData(List<T> data) {
         this.data = (List)data;
     }
-
 }

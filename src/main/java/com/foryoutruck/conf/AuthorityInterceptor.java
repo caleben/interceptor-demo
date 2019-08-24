@@ -34,11 +34,10 @@ public class AuthorityInterceptor extends HandlerInterceptorAdapter {
             ResponseWrite.writeResult(response, serverResponse);
             return false;
         }
-        // 拿到被访问url所需要的角色
-        // 再从数据库中拿到当前登录用户是否在这个角色组里
-        // 在这个角色组中，返回true，否则返回false
-        String roleName = authority.value();
-        System.out.println(roleName);
+        // 拿到被访问url所需要的权限
+        // 再看用户是否有这个权限
+        // 有就返回true，否则返回false
+        int value = authority.id();
         return true;
     }
 }

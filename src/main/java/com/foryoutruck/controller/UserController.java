@@ -32,7 +32,7 @@ public class UserController {
         return serverResponse;
     }
 
-    @Authority
+    @Authority()
     @RequestMapping("delete")
     public ServerResponse delete(HttpServletRequest request) {
         String usename = (String) request.getAttribute("userInfo");

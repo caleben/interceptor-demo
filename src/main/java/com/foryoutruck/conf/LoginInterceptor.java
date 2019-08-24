@@ -21,10 +21,11 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             // 用户没有登录
             ServerResponse serverResponse = new ServerResponse(ServerResponse.GlobalStatus.ERROR, "请登录");
             ResponseWrite.writeResult(response, serverResponse);
+            return false;
         } else {
             // 往request放一下用户的属性
             request.setAttribute("userInfo", username);
+            return true;
         }
-        return false;
     }
 }
