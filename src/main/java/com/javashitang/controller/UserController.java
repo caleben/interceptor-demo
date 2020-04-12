@@ -1,17 +1,14 @@
-package com.foryoutruck.controller;
+package com.javashitang.controller;
 
-import com.foryoutruck.annotation.Authority;
-import com.foryoutruck.common.ServerResponse;
-import com.foryoutruck.pojo.Product;
+import com.javashitang.annotation.Authority;
+import com.javashitang.common.ServerResponse;
+import com.javashitang.pojo.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 
 @Slf4j
 @RestController

@@ -1,7 +1,7 @@
-package com.foryoutruck.conf;
+package com.javashitang.conf;
 
-import com.foryoutruck.common.ServerResponse;
-import com.foryoutruck.util.JsonUtil;
+import com.javashitang.common.ServerResponse;
+import com.javashitang.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletResponse;

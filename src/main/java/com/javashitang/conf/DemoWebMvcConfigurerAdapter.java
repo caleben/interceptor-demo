@@ -1,4 +1,4 @@
-package com.foryoutruck.conf;
+package com.javashitang.conf;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

@@ -1,6 +1,6 @@
-package com.foryoutruck.conf;
+package com.javashitang.conf;
 
-import com.foryoutruck.common.ServerResponse;
+import com.javashitang.common.ServerResponse;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;

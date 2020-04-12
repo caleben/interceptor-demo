@@ -1,4 +1,4 @@
-package com.foryoutruck.common;
+package com.javashitang.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;

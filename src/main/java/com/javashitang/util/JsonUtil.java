@@ -1,4 +1,4 @@
-package com.foryoutruck.util;
+package com.javashitang.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

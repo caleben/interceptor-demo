@@ -1,4 +1,4 @@
-package com.foryoutruck.pojo;
+package com.javashitang.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

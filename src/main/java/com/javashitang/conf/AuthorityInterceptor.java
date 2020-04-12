@@ -1,7 +1,7 @@
-package com.foryoutruck.conf;
+package com.javashitang.conf;
 
-import com.foryoutruck.annotation.Authority;
-import com.foryoutruck.common.ServerResponse;
+import com.javashitang.annotation.Authority;
+import com.javashitang.common.ServerResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
